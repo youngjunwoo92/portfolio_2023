@@ -19,11 +19,9 @@ a:hover {
 }
 
 html{
-  overflow-x: hidden;
 }
 
 body {
   cursor: default;
-  overflow-x: hidden;
 }
 
