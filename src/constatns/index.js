@@ -1,8 +1,4 @@
 import {
-  mobile,
-  backend,
-  creator,
-  web,
   javascript,
   typescript,
   html,
@@ -13,16 +9,9 @@ import {
   nodejs,
   mongodb,
   git,
-  figma,
-  docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
   threejs,
+  tcs,
+  cpp,
 } from '../assets';
 
 export const navLinks = [
@@ -41,25 +30,6 @@ export const navLinks = [
   {
     id: 'contact',
     title: 'Contact',
-  },
-];
-
-const services = [
-  {
-    title: 'Web Developer',
-    icon: web,
-  },
-  {
-    title: 'React Native Developer',
-    icon: mobile,
-  },
-  {
-    title: 'Backend Developer',
-    icon: backend,
-  },
-  {
-    title: 'Content Creator',
-    icon: creator,
   },
 ];
 
@@ -108,95 +78,38 @@ const technologies = [
     name: 'git',
     icon: git,
   },
-  {
-    name: 'figma',
-    icon: figma,
-  },
-  {
-    name: 'docker',
-    icon: docker,
-  },
 ];
 
 const experiences = [
   {
-    title: 'React.js Developer',
-    company_name: 'Starbucks',
-    icon: starbucks,
-    iconBg: '#383E56',
-    date: 'March 2020 - April 2021',
-    points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
-    ],
+    title: 'Bachelor of Science Computer Science',
+    company_name: 'California State Polytechnic University Pomona',
+    location: 'Pomona, CA',
+    icon: cpp,
+    iconBg: '#fff',
+    date: 'Aug 2015 - May 2020',
+    points: [],
   },
-  {
-    title: 'React Native Developer',
-    company_name: 'Tesla',
-    icon: tesla,
-    iconBg: '#E6DEDD',
-    date: 'Jan 2021 - Feb 2022',
-    points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
-    ],
-  },
-  {
-    title: 'Web Developer',
-    company_name: 'Shopify',
-    icon: shopify,
-    iconBg: '#383E56',
-    date: 'Jan 2022 - Jan 2023',
-    points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
-    ],
-  },
-  {
-    title: 'Full stack Developer',
-    company_name: 'Meta',
-    icon: meta,
-    iconBg: '#E6DEDD',
-    date: 'Jan 2023 - Present',
-    points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
-    ],
-  },
-];
 
-const testimonials = [
   {
-    testimonial:
-      'I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.',
-    name: 'Sara Lee',
-    designation: 'CFO',
-    company: 'Acme Co',
-    image: 'https://randomuser.me/api/portraits/women/4.jpg',
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: 'Chris Brown',
-    designation: 'COO',
-    company: 'DEF Corp',
-    image: 'https://randomuser.me/api/portraits/men/5.jpg',
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: 'Lisa Wang',
-    designation: 'CTO',
-    company: '456 Enterprises',
-    image: 'https://randomuser.me/api/portraits/women/6.jpg',
+    title: 'Front-End Developer',
+    company_name: 'The Code Solution',
+    location: 'Los Angeles, CA',
+    icon: tcs,
+    iconBg: '#212121',
+    date: 'May 2022 - May 2023',
+    points: [
+      'Handled entire front-end development for a fully responsive multi-vendor e-commerce web app for a real estate company using React, Node.js, MySQL, and AWS with a back end developer and manager, resulting in a successful test launch.',
+      'Implemented a real-time notification and chat system using web sockets, improving communication.',
+      'Enhanced user experience by utilizing React Suspense and Error Boundary, handling loading states and error scenarios to provide a seamless browsing experience for users.',
+      'Developed and integrated a reliable payment system using Stripe, ensuring secure/convenient customer transactions. ',
+      'Streamlined the product shipping process by integrating Shipengine, optimizing logistics and delivery operations.',
+      'Conducted REST API design and implemented best practices such as agile and scrum, resulting in clean and efficient code structure and improved maintainability.',
+      'Implemented a robust CI/CD pipeline using GitHub Actions, enabling automated testing, building, and deployment processes, ensuring efficient and reliable releases.',
+      'Deployed the web application using AWS S3, CloudFront, and EC2, ensuring scalability, high availability, and reliable user performance.',
+      'Implemented effective SEO techniques with Lambda@Edge, significantly improving the visibility of the single-page application (SPA) on search engines and attracting more organic traffic to the website.',
+      'Employed code splitting methodologies to enhance the initial loading speed of the single-page web application, leading to a 20% reduction in loading time. ',
+    ],
   },
 ];
 
@@ -219,7 +132,7 @@ const projects = [
         color: 'pink-text-gradient',
       },
     ],
-    image: carrent,
+    // image: carrent,
     source_code_link: 'https://github.com/',
   },
   {
@@ -240,7 +153,7 @@ const projects = [
         color: 'pink-text-gradient',
       },
     ],
-    image: jobit,
+    // image: jobit,
     source_code_link: 'https://github.com/',
   },
   {
@@ -261,9 +174,9 @@ const projects = [
         color: 'pink-text-gradient',
       },
     ],
-    image: tripguide,
+    // image: tripguide,
     source_code_link: 'https://github.com/',
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { technologies, experiences, projects };
