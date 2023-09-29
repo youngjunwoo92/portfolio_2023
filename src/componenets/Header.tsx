@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 
-import { navLinks } from './../constatns/index';
+import { navLinks } from '../constatns/index';
 import { styles } from '../styles';
 
 type NavLink = {
@@ -10,9 +10,11 @@ type NavLink = {
   title: string;
 };
 
-export default function Hedaer() {
+export default function Header() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [active, setActive] = useState<string>('');
+
+  console.log({ isOpen });
 
   const handleClick = () => {
     setIsOpen((prev) => !prev);

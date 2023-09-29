@@ -12,7 +12,7 @@ type Props = {
 };
 
 export default function ProjectCard({ project, index }: Props) {
-  const { name, image, tags, description, githubLink } = project;
+  const { name, description } = project;
   return (
     <motion.div variants={fadeIn('up', 'spring', index * 0.25, 0.75)}>
       <Tilt

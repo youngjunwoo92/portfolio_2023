@@ -1,6 +1,6 @@
 import { BrowserRouter } from 'react-router-dom';
 
-import Hedaer from './componenets/Hedaer';
+import Header from './componenets/Header';
 import Hero from './componenets/Hero';
 import About from './componenets/About';
 import Experience from './componenets/Experience';
@@ -10,7 +10,7 @@ import Contact from './componenets/Contact';
 function App() {
   return (
     <BrowserRouter>
-      <Hedaer />
+      <Header />
       <main>
         <Hero />
         <About />
