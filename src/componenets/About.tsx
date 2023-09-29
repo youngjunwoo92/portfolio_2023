@@ -1,24 +1,21 @@
-import { motion } from 'framer-motion';
+import { useMediaQuery } from 'react-responsive';
 import Marquee from 'react-fast-marquee';
+import { motion } from 'framer-motion';
+
+import MarqueeIItem from './MarqueeIItem';
 
 import { textVariant, fadeIn } from './../utilities/motion';
-import { technologies } from '../constatns';
 import { SectionWrapper } from '../hoc';
+import { skills } from '../constatns';
 import { styles } from '../styles';
 
-import { useMediaQuery } from 'react-responsive';
-
-type Technology = {
+type Skill = {
   name: string;
   icon: string;
 };
 
 function About() {
-  const isMedium = useMediaQuery({ query: `(max-width: 768px )` });
-
-  const middle = Math.ceil(technologies.length / 2);
-  const firstHalf = technologies.slice(0, middle);
-  const secondHalf = technologies.slice(middle);
+  const isLarge = useMediaQuery({ query: `(max-width: 1024px )` });
 
   return (
     <>
@@ -41,41 +38,29 @@ function About() {
 
       <motion.div
         variants={fadeIn('', '', 0.1, 1)}
-        className='flex flex-col gap-20 mt-20'
+        className='flex flex-col gap-10 mt-20'
       >
         <Marquee
           autoFill
-          speed={isMedium ? 50 : 70}
+          speed={isLarge ? 50 : 70}
           direction='right'
           pauseOnHover
         >
-          {firstHalf.map((technology: Technology) => (
-            <div
-              key={technology.name}
-              className='w-[120px] md:w-[256px] flex flex-col gap-2 items-center text-center'
-            >
-              <img
-                src={technology.icon}
-                alt={technology.name}
-                className='w-[80px]'
-              />
-              <p className='text-xs md:text-lg'>{technology.name}</p>
-            </div>
+          {skills.languagesAndFrameworks.map((skill: Skill) => (
+            <MarqueeIItem
+              key={skill.name}
+              icon={skill.icon}
+              name={skill.name}
+            />
           ))}
         </Marquee>
-        <Marquee speed={isMedium ? 50 : 70} pauseOnHover autoFill>
-          {secondHalf.map((technology: Technology) => (
-            <div
-              key={technology.name}
-              className='w-[120px] md:w-[256px] flex flex-col gap-2 items-center text-center'
-            >
-              <img
-                src={technology.icon}
-                alt={technology.name}
-                className='w-[80px]'
-              />
-              <p className='text-xs md:text-lg'>{technology.name}</p>
-            </div>
+        <Marquee speed={isLarge ? 50 : 70} pauseOnHover autoFill>
+          {skills.others.map((skill: Skill) => (
+            <MarqueeIItem
+              key={skill.name}
+              icon={skill.icon}
+              name={skill.name}
+            />
           ))}
         </Marquee>
       </motion.div>

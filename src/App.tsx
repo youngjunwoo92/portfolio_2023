@@ -4,7 +4,7 @@ import Hedaer from './componenets/Hedaer';
 import Hero from './componenets/Hero';
 import About from './componenets/About';
 import Experience from './componenets/Experience';
-import Skills from './componenets/Skills';
+import Projects from './componenets/Projects';
 import Contact from './componenets/Contact';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <Hero />
         <About />
         <Experience />
-        <Skills />
+        <Projects />
         <Contact />
       </main>
     </BrowserRouter>

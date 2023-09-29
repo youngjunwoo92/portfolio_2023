@@ -3,9 +3,9 @@ import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 type Props = {
   experience: {
     title: string;
-    company_name: string;
+    companyName: string;
     location: string;
-    icon: string;
+    icon: React.ReactNode;
     iconBg: string;
     date: string;
     points: string[];
@@ -13,35 +13,32 @@ type Props = {
 };
 
 export default function ExperienceCard({ experience }: Props) {
+  const { title, companyName, location, icon, iconBg, date, points } =
+    experience;
+
   return (
     <VerticalTimelineElement
+      date={date}
       contentStyle={{ background: '#1d1836', color: '#fff' }}
       contentArrowStyle={{ borderRight: '7px solid #fff' }}
-      date={experience.date}
-      iconStyle={{ background: experience.iconBg }}
-      icon={
-        <div className='flex justify-center items-center w-full h-full rounded-full overflow-hidden'>
-          <img
-            src={experience.icon}
-            alt={experience.company_name}
-            className='w-full h-full object-contain apsect-square'
-          />
-        </div>
-      }
+      iconStyle={{
+        background: iconBg,
+        color: '#fff',
+      }}
+      icon={icon}
     >
-      <div>
-        <h3 className='text-white text-xl font-bold'>
-          {experience.company_name}
-        </h3>
-        <p className='text-secondary font-semibold'>{experience.title}</p>
-        <ul className='mt-5 list-disc ml-5 space-y-2'>
-          {experience.points.map((point, index) => (
-            <li key={`experience-point-${index}`}>
-              <p>{point}</p>
-            </li>
-          ))}
-        </ul>
+      <h3 className='text-white text-xl font-bold'>{companyName}</h3>
+      <div className='flex justify-between text-secondary font-semibold'>
+        <p>{title}</p>
+        <p>{location}</p>
       </div>
+      <ul className='mt-5 list-disc ml-5 space-y-2'>
+        {points.map((point, index) => (
+          <li key={`experience-point-${index}`}>
+            <p>{point}</p>
+          </li>
+        ))}
+      </ul>
     </VerticalTimelineElement>
   );
 }

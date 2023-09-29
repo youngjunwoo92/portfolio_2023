@@ -36,7 +36,9 @@ export default function Hedaer() {
               <li
                 key={navLink.id}
                 className={
-                  active === navLink.title ? 'text-white' : 'text-secondary'
+                  active === navLink.title
+                    ? 'text-white'
+                    : 'text-secondary hover:text-white'
                 }
                 onClick={() => handleClickLink(navLink.title)}
               >

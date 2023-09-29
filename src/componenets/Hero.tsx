@@ -1,11 +1,12 @@
-import profileImage from '../assets/profile.jpg';
-import { SectionWrapper } from '../hoc';
-import { motion } from 'framer-motion';
-import { fadeIn, textVariant } from '../utilities/motion';
-import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Sphere, MeshDistortMaterial } from '@react-three/drei';
-import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
+import { Canvas } from '@react-three/fiber';
+import { motion } from 'framer-motion';
+import styled from 'styled-components';
+
+import { fadeIn, textVariant } from '../utilities/motion';
+import { profileImage } from '../assets';
+import { SectionWrapper } from '../hoc';
 import { styles } from '../styles';
 
 function Hero() {
