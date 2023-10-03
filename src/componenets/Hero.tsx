@@ -11,12 +11,13 @@ import { styles } from '../styles';
 
 function Hero() {
   const isMedium = useMediaQuery({ query: `(max-width: 768px )` });
+
   return (
     <div className='h-screen'>
       <div className='relative h-full w-full flex flex-col md:flex-row'>
         <motion.div
           variants={textVariant()}
-          className='text-center md:text-left flex flex-col md:justify-center basis-1/2 md:text-left text-xl'
+          className='basis-1/2 md:basis-[auto] md:max-w-[480px] md:w-full text-center md:text-left flex flex-col md:justify-center text-xl'
         >
           <h2 className={styles.heroSubText}>Hi, my name is</h2>
           <h2 className={`${styles.heroHeadText}`}>Youngjun Woo</h2>
@@ -26,7 +27,7 @@ function Hero() {
         </motion.div>
         <motion.div
           variants={fadeIn('', '', 0.0125, 1)}
-          className='relative basis-1/2 order-first md:order-last'
+          className='basis-1/2 md:basis-[auto] relative md:grow order-first md:order-last '
         >
           <Canvas>
             <OrbitControls enableZoom={false} />
