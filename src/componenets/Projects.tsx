@@ -17,8 +17,10 @@ export type Project = {
   name: string;
   description: string;
   tags: Tag[];
+  thumbnail: string;
   image: string;
   githubLink: string;
+  link: string;
 };
 
 const Projects = () => {
