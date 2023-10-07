@@ -104,7 +104,8 @@ const projects = [
     id: 0,
     name: 'Woostagram',
     year: '2023',
-    description: 'Instagram clone.',
+    description:
+      'Built an Instagram Clone project using Next.js for server-side rendering to deepen my understanding of web development, featuring user authentication, post creation, commenting, and a follow/unfollow system.',
     tags: [
       {
         name: 'Next.js',
@@ -129,7 +130,7 @@ const projects = [
     name: 'Twitter Clone',
     year: '2021',
     description:
-      'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
+      'This MERN Stack Twitter clone showcases my back-end development skills, acquired to complement my expertise in front-end development. It demonstrates my proficiency in server management, database handling, and HTTP protocols.',
     tags: [
       {
         name: 'React',
@@ -158,7 +159,7 @@ const projects = [
     name: 'Motion',
     year: '2021',
     description:
-      'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
+      'Motion is a TypeScript and OOP learning project with features for adding, deleting, and drag-and-drop content elements.',
     tags: [
       {
         name: 'HTML',
@@ -183,7 +184,7 @@ const projects = [
     name: 'Carrot Game',
     year: '2021',
     description:
-      'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+      'Simple game built with vanilla JavaScript. Created to enhance my understanding of JavaScript DOM (Document Object Model) manipulation, the game challenges users to find and click on all the hidden carrots within a specified time limit. ',
     tags: [
       {
         name: 'HTML',
@@ -209,7 +210,7 @@ const projects = [
     name: 'Card Maker',
     year: '2021',
     description:
-      'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+      'Web application that simplifies the creation and real-time editing of business cards. Users can design their cards and see changes saved instantly with Firebase Realtime Database.',
     tags: [
       {
         name: 'React',
