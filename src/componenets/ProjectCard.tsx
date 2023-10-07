@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
 import { fadeIn } from '../utilities/motion';
-import { Tilt } from 'react-tilt';
+// import { Tilt } from 'react-tilt';
 
 import { Project } from './Projects';
 import Chip from './Chip';
@@ -19,11 +19,18 @@ export default function ProjectCard({ project, index }: Props) {
 
   return (
     <motion.div variants={fadeIn('up', 'spring', index * 0.25, 0.75)}>
-      <Tilt
+      {/* <Tilt
         options={{ max: 25, scale: 1, speed: 450 }}
-        className='flex flex-col bg-tertiary p-4 rounded-2xl h-full'
-      >
-        <img src={image} className='rounded-2xl object-cover aspect-[4/3]' />
+        className='group relative flex flex-col bg-tertiary p-4 rounded-2xl h-full'
+      > */}
+      <div className='group flex flex-col bg-tertiary p-4 rounded-2xl h-full'>
+        <div className='relative rounded-2xl overflow-hidden aspect-[4/3] w-full h-full'>
+          <img src={thumbnail} className='w-full h-full object-cover' />
+          <img
+            src={image}
+            className='w-full h-full absolute inset-0 object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100'
+          />
+        </div>
         <div className='flex flex-col h-full mt-4'>
           <div className='flex items-center justify-between'>
             <h3 className='font-bold text-lg md:text-xl'>{name}</h3>
@@ -45,7 +52,8 @@ export default function ProjectCard({ project, index }: Props) {
             </div>
           </div>
         </div>
-      </Tilt>
+      </div>
+      {/* </Tilt> */}
     </motion.div>
   );
 }
