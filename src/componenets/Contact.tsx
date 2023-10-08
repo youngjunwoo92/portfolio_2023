@@ -8,6 +8,7 @@ import EarthCanvas from './canvas/Earth';
 
 import { IoSend } from 'react-icons/io5';
 import emailjs from '@emailjs/browser';
+import LoadingSpinner from './LoadingSpinner';
 
 const publicKey = import.meta.env.VITE_EMAIL_PUBLIC_KEY;
 const serviceId = import.meta.env.VITE_EMAIL_SERVICE_ID;
@@ -87,7 +88,7 @@ const Contact = () => {
             <input
               type='text'
               name='name'
-              value={form?.name}
+              value={form.name}
               onChange={handleChange}
               placeholder='Name'
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium'
@@ -95,24 +96,32 @@ const Contact = () => {
             <input
               type='email'
               name='email'
-              value={form?.email}
+              value={form.email}
               onChange={handleChange}
               placeholder='Email'
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium'
             />
             <textarea
               name='message'
+              value={form.message}
               rows={7}
               onChange={handleChange}
               placeholder='Message'
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium'
             />
             <button
+              disabled={loading}
               type='submit'
               className='flex items-center justify-center gap-4 bg-black py-4 rounded-lg font-semibold '
             >
-              <IoSend size={24} />
-              {loading ? 'SENDING' : 'SEND'}
+              {loading ? (
+                <LoadingSpinner />
+              ) : (
+                <>
+                  <IoSend size={24} />
+                  SEND
+                </>
+              )}
             </button>
           </form>
         </motion.div>
