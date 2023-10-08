@@ -1,4 +1,5 @@
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
+import Chip from './Chip';
 
 type Props = {
   experience: {
@@ -8,13 +9,22 @@ type Props = {
     icon: React.ReactNode;
     iconBg: string;
     date: string;
-    points: string[];
+    description: string;
+    technologies: string[];
   };
 };
 
 export default function ExperienceCard({ experience }: Props) {
-  const { title, companyName, location, icon, iconBg, date, points } =
-    experience;
+  const {
+    title,
+    companyName,
+    location,
+    icon,
+    iconBg,
+    date,
+    description,
+    technologies,
+  } = experience;
 
   return (
     <VerticalTimelineElement
@@ -32,13 +42,20 @@ export default function ExperienceCard({ experience }: Props) {
         <p>{title}</p>
         <p>{location}</p>
       </div>
-      <ul className='mt-5 list-disc ml-5 space-y-2'>
-        {points.map((point, index) => (
-          <li key={`experience-point-${index}`}>
-            <p>{point}</p>
+      {technologies.length > 0 && (
+        <div className='mt-4 flex gap-2'>
+          {technologies.map((technology) => (
+            <Chip label={technology} />
+          ))}
+        </div>
+      )}
+      {description && (
+        <ul className='mt-5 list-disc ml-5 space-y-2'>
+          <li>
+            <p>{description}</p>
           </li>
-        ))}
-      </ul>
+        </ul>
+      )}
     </VerticalTimelineElement>
   );
 }

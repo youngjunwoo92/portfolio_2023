@@ -6,6 +6,7 @@ import About from './componenets/About';
 import Experience from './componenets/Experience';
 import Projects from './componenets/Projects';
 import Contact from './componenets/Contact';
+import StarsCanvas from './componenets/canvas/Stars';
 
 function App() {
   return (
@@ -16,7 +17,10 @@ function App() {
         <About />
         <Experience />
         <Projects />
-        <Contact />
+        <div className='relative'>
+          <Contact />
+          <StarsCanvas />
+        </div>
       </main>
     </BrowserRouter>
   );

@@ -38,7 +38,7 @@ function About() {
 
       <motion.div
         variants={fadeIn('', '', 0.1, 1)}
-        className='flex flex-col gap-10 mt-20'
+        className='flex flex-col gap-10 mt-20 w-[100vw] max-w-[100vw] ml-[calc(50%-50vw)]'
       >
         <Marquee
           autoFill

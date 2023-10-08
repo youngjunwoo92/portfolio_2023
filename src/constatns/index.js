@@ -45,7 +45,7 @@ export const navLinks = [
   },
 ];
 
-const skills = {
+export const skills = {
   languagesAndFrameworks: [
     {
       name: 'HTML 5',
@@ -99,7 +99,7 @@ const skills = {
   ],
 };
 
-const projects = [
+export const projects = [
   {
     id: 0,
     name: 'Woostagram',
@@ -231,5 +231,3 @@ const projects = [
     link: 'https://business-car-maker.web.app/',
   },
 ];
-
-export { skills, projects };
