@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { navLinks } from '../constatns/index';
 import { styles } from '../styles';
+// import Modal from './Modal';
 
 type NavLink = {
   id: string;
@@ -56,6 +57,7 @@ export default function Header() {
           </button>
         </nav>
       </div>
+      {/* <Modal isOpen={true} onClose={() => {}} /> */}
     </header>
   );
 }
