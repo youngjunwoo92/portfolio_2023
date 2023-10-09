@@ -4,18 +4,16 @@ import { Link } from 'react-router-dom';
 
 import { navLinks } from '../constatns/index';
 import { styles } from '../styles';
-// import Modal from './Modal';
+import Modal from './Modal';
 
-type NavLink = {
+export type NavLink = {
   id: string;
   title: string;
 };
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(true);
   const [active, setActive] = useState<string>('');
-
-  console.log({ isOpen });
 
   const handleClick = () => {
     setIsOpen((prev) => !prev);
@@ -23,6 +21,10 @@ export default function Header() {
 
   const handleClickLink = (title: string) => {
     setActive(title);
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
   };
 
   return (
@@ -57,7 +59,7 @@ export default function Header() {
           </button>
         </nav>
       </div>
-      {/* <Modal isOpen={true} onClose={() => {}} /> */}
+      <Modal isOpen={isOpen} onClose={handleClose} />
     </header>
   );
 }
