@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
 
-import SectionWrapper from '../hoc/SectionWrapper';
-import ProjectCard from './ProjectCard';
+import { SectionWrapper } from '../hoc';
+
+// import ProjectCard from './ProjectCard';
 
 import { textVariant, fadeIn } from '../utilities/motion';
 import { styles } from '../styles';
-import { projects } from '../constatns';
+// import { projects } from '../constatns';
 
 type Tag = {
   name: string;
@@ -30,6 +31,7 @@ const Projects = () => {
         <p className={styles.sectionSubText}>SHOWCASING MY PROJECTS</p>
         <h2 className={styles.sectionHeadText}>Projects</h2>
       </motion.div>
+
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
         className='mt-4 text-secondary text-lg md:text-xl leading-[30px]'
@@ -41,11 +43,12 @@ const Projects = () => {
         collection to witness the diversity of my skills and the commitment I
         pour into every project.
       </motion.p>
-      <div className='mt-20 grid gap-4 grid-cols-[repeat(auto-fill,minmax(320px,1fr))] auto-rows-fr'>
+
+      {/* <div className='mt-20 grid gap-4 grid-cols-[repeat(auto-fill,minmax(320px,1fr))] auto-rows-fr'>
         {projects.map((project: Project, index: number) => (
           <ProjectCard key={index} project={project} index={index} />
         ))}
-      </div>
+      </div> */}
     </>
   );
 };

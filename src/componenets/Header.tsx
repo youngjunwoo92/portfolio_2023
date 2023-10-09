@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 
@@ -11,24 +11,39 @@ export type NavLink = {
   title: string;
 };
 
-export default function Header() {
-  const [isOpen, setIsOpen] = useState<boolean>(true);
-  const [active, setActive] = useState<string>('');
+type Props = {
+  activeSection: string | null;
+};
+
+export default function Header({ activeSection }: Props) {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
   const handleClick = () => {
     setIsOpen((prev) => !prev);
-  };
-
-  const handleClickLink = (title: string) => {
-    setActive(title);
   };
 
   const handleClose = () => {
     setIsOpen(false);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      scrollY > 150 ? setIsScrolled(true) : setIsScrolled(false);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className='bg-primary fixed top-0 left-0 right-0 z-50 w-full h-16'>
+    <header
+      className={`${
+        isScrolled ? 'bg-primary' : 'bg-dark'
+      } fixed top-0 left-0 right-0 z-50 w-full h-[64px] transition duration-300`}
+    >
       <div
         className={`${styles.maxWidth} w-full mx-auto flex items-center justify-between p-4`}
       >
@@ -41,11 +56,10 @@ export default function Header() {
               <li
                 key={navLink.id}
                 className={
-                  active === navLink.title
+                  activeSection === navLink.id
                     ? 'text-white'
-                    : 'text-secondary hover:text-white'
+                    : 'text-gray-400 hover:text-white'
                 }
-                onClick={() => handleClickLink(navLink.title)}
               >
                 <a href={`#${navLink.id}`}>{navLink.title}</a>
               </li>

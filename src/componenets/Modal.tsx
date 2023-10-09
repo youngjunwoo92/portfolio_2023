@@ -1,11 +1,12 @@
 import {
-  FcHome,
+  FcMultipleDevices,
   FcBusiness,
   FcSelfie,
-  FcSms,
-  FcMultipleDevices,
+  FcHome,
   FcLeft,
+  FcSms,
 } from 'react-icons/fc';
+
 type Props = {
   isOpen: boolean;
   onClose: () => void;
@@ -15,7 +16,7 @@ export default function Modal({ isOpen, onClose }: Props) {
   if (!isOpen) return null;
 
   return (
-    <div className='bg-tertiary fixed inset-0 animate-[slideIn_0.3s_ease-in-out]'>
+    <div className='sm:hidden bg-slate-900 fixed inset-0 animate-[slideIn_0.3s_ease-in-out]'>
       <button
         onClick={onClose}
         className='h-16 flex items-center gap-2 p-4 text-2xl'

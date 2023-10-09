@@ -45,7 +45,7 @@ export default function ExperienceCard({ experience }: Props) {
       {technologies.length > 0 && (
         <div className='mt-4 flex flex-wrap gap-2'>
           {technologies.map((technology) => (
-            <Chip label={technology} />
+            <Chip key={technology} label={technology} />
           ))}
         </div>
       )}
