@@ -58,11 +58,25 @@ const Image = styled.img`
   width: 100%;
   aspect-ratio: 1 / 1;
   pointer-events: none;
-  animation: animate 2s infinite ease alternate;
+  animation:
+    animate 2s infinite ease alternate,
+    borderAnimate 5s infinite ease alternate;
   border-radius: 31% 69% 59% 41% / 53% 52% 48% 47%;
+  border: 8px solid white;
   @keyframes animate {
     to {
       transform: translateY(20px);
+    }
+  }
+  @keyframes borderAnimate {
+    0% {
+      border-radius: 31% 69% 59% 41% / 53% 52% 48% 47%;
+    }
+    50% {
+      border-radius: 18% 82% 33% 67% / 73% 31% 69% 27%;
+    }
+    100% {
+      border-radius: 31% 69% 59% 41% / 53% 52% 48% 47%;
     }
   }
 
