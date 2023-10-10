@@ -20,7 +20,8 @@ export default function Header({ activeSection }: Props) {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
   const handleClick = () => {
-    setIsOpen((prev) => !prev);
+    console.log('clicked');
+    setIsOpen(true);
   };
 
   const handleClose = () => {
@@ -37,6 +38,10 @@ export default function Header({ activeSection }: Props) {
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    document.body.style.overflowY = isOpen ? 'hidden' : 'auto';
+  }, [isOpen]);
 
   return (
     <header

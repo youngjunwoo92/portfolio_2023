@@ -1,12 +1,12 @@
-import { useState, useEffect } from 'react';
+import { lazy, useState, useEffect } from 'react';
 
-import StarsCanvas from './componenets/canvas/Stars';
-import Experience from './componenets/Experience';
-import Projects from './componenets/Projects';
-import Contact from './componenets/Contact';
-import Header from './componenets/Header';
-import About from './componenets/About';
-import Hero from './componenets/Hero';
+const StarsCanvas = lazy(() => import('./componenets/canvas/Stars'));
+const Experience = lazy(() => import('./componenets/Experience'));
+const Projects = lazy(() => import('./componenets/Projects'));
+const Contact = lazy(() => import('./componenets/Contact'));
+const Header = lazy(() => import('./componenets/Header'));
+const About = lazy(() => import('./componenets/About'));
+const Hero = lazy(() => import('./componenets/Hero'));
 
 function App() {
   const [activeSection, setActiveSection] = useState<string | null>('home');
