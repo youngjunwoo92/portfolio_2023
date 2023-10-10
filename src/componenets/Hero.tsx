@@ -60,7 +60,7 @@ const Image = styled.img`
   pointer-events: none;
   animation:
     animate 2s infinite ease alternate,
-    borderAnimate 5s infinite ease alternate;
+    borderAnimate 8s infinite ease alternate;
   border-radius: 31% 69% 59% 41% / 53% 52% 48% 47%;
   border: 8px solid white;
   @keyframes animate {
@@ -73,7 +73,7 @@ const Image = styled.img`
       border-radius: 31% 69% 59% 41% / 53% 52% 48% 47%;
     }
     50% {
-      border-radius: 18% 82% 33% 67% / 73% 31% 69% 27%;
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     }
     100% {
       border-radius: 31% 69% 59% 41% / 53% 52% 48% 47%;

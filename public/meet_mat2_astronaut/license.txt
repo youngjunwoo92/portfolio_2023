@@ -1,0 +1,11 @@
+Model Information:
+* title:	Meet Mat2 Astronaut
+* source:	https://sketchfab.com/3d-models/meet-mat2-astronaut-2768bcd97f464e30a6c79df2c3497786
+* author:	TheKnightDuck (https://sketchfab.com/lordfelps14)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Meet Mat2 Astronaut" (https://sketchfab.com/3d-models/meet-mat2-astronaut-2768bcd97f464e30a6c79df2c3497786) by TheKnightDuck (https://sketchfab.com/lordfelps14) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
