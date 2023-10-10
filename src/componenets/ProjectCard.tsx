@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, useAnimation, useInView } from 'framer-motion';
 
 import { fadeIn } from '../utilities/motion';
 // import { Tilt } from 'react-tilt';
@@ -7,6 +7,7 @@ import { Project } from './Projects';
 import Chip from './Chip';
 
 import { BiLinkExternal, BiLogoGithub } from 'react-icons/bi';
+import { useEffect, useRef } from 'react';
 
 type Props = {
   project: Project;
@@ -17,8 +18,23 @@ export default function ProjectCard({ project, index }: Props) {
   const { name, thumbnail, description, githubLink, link, tags, image } =
     project;
 
+  const ref = useRef(null);
+  const inView = useInView(ref);
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('show');
+    }
+  }, [controls, inView]);
+
   return (
-    <motion.div variants={fadeIn('up', 'spring', index * 0.25, 0.75)}>
+    <motion.div
+      ref={ref}
+      initial='hidden'
+      animate={controls}
+      variants={fadeIn('up', 'spring', index * 0.25, 0.75)}
+    >
       <div
         // options={{ max: 25, scale: 1, speed: 450 }}
         className='group relative flex flex-col bg-tertiary p-4 rounded-2xl h-full'
