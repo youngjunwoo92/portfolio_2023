@@ -53,7 +53,7 @@ export default function Header({ activeSection }: Props) {
         className={`${styles.maxWidth} w-full mx-auto flex items-center justify-between p-4`}
       >
         <h1 className='text-xl font-bold'>
-          <Link to='#'>Woo.dev</Link>
+          <Link to='#'>woo.dev</Link>
         </h1>
         <nav>
           <ul className='hidden sm:flex gap-4 text-xl font-medium'>

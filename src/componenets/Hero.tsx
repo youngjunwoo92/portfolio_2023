@@ -20,7 +20,7 @@ function Hero() {
           className='basis-1/2 md:basis-[auto] md:max-w-[480px] md:w-full text-center md:text-left flex flex-col md:justify-center text-xl'
         >
           <h2 className={styles.heroSubText}>Hi, my name is</h2>
-          <h2 className={`${styles.heroHeadText}`}>Youngjun Woo</h2>
+          <h2 className={`${styles.heroHeadText} text-spot`}>Youngjun Woo</h2>
           <p className='text-lg sm:text-xl md:text-2xl font-medium mt-4'>
             A software engineer currently residing in California, United States
           </p>

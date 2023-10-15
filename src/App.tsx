@@ -1,4 +1,5 @@
 import { lazy, useState, useEffect } from 'react';
+import Footer from './componenets/Footer';
 
 const StarsCanvas = lazy(() => import('./componenets/canvas/Stars'));
 const Experience = lazy(() => import('./componenets/Experience'));
@@ -43,6 +44,7 @@ function App() {
           <Contact />
           <StarsCanvas />
         </div>
+        <Footer />
       </main>
     </>
   );

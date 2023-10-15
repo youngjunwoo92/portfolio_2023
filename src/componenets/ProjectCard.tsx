@@ -22,6 +22,8 @@ export default function ProjectCard({ project, index }: Props) {
   const inView = useInView(ref);
   const controls = useAnimation();
 
+  console.log({ index });
+
   useEffect(() => {
     if (inView) {
       controls.start('show');
@@ -29,11 +31,17 @@ export default function ProjectCard({ project, index }: Props) {
   }, [controls, inView]);
 
   return (
+    // <motion.div
+    //   ref={ref}
+    //   initial='hidden'
+    //   animate={controls}
+    //   variants={fadeIn('up', 'spring', index * 0.25, 0.75)}
+    // >
     <motion.div
       ref={ref}
       initial='hidden'
       animate={controls}
-      variants={fadeIn('up', 'spring', index * 0.25, 0.75)}
+      variants={fadeIn('up', 'spring', 0.25, 0.75)}
     >
       <div
         // options={{ max: 25, scale: 1, speed: 450 }}
@@ -50,10 +58,20 @@ export default function ProjectCard({ project, index }: Props) {
           <div className='flex items-center justify-between'>
             <h3 className='font-bold text-lg md:text-xl'>{name}</h3>
             <div className='flex gap-2 items-center'>
-              <a href={githubLink} target='_blank' rel='noreferrer'>
+              <a
+                href={githubLink}
+                target='_blank'
+                rel='noreferrer'
+                className='text-slate-300 hover:text-white transition-colors'
+              >
                 <BiLogoGithub size={24} />
               </a>
-              <a href={link} target='_blank' rel='noreferrer'>
+              <a
+                href={link}
+                target='_blank'
+                rel='noreferrer'
+                className='text-slate-300 hover:text-white transition-colors'
+              >
                 <BiLinkExternal size={24} />
               </a>
             </div>

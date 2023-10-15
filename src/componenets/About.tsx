@@ -1,22 +1,18 @@
-import { useMediaQuery } from 'react-responsive';
-import Marquee from 'react-fast-marquee';
 import { motion } from 'framer-motion';
-
-import MarqueeIItem from './MarqueeIItem';
 
 import { textVariant, fadeIn } from './../utilities/motion';
 import { SectionWrapper } from '../hoc';
 import { skills } from '../constatns';
 import { styles } from '../styles';
 
-type Skill = {
+import SkillCard from './SkillCard';
+
+export type Skill = {
   name: string;
   icon: string;
 };
 
 function About() {
-  const isLarge = useMediaQuery({ query: `(max-width: 1024px )` });
-
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -35,8 +31,18 @@ function About() {
         the sole front end developer, supporting processes from UX input to
         launch monitoring.
       </motion.p>
-
       <motion.div
+        variants={fadeIn('', '', 0.1, 1)}
+        className='mt-20 flex flex-col md:grid gap-4 md:grid-cols-[repeat(auto-fit,minmax(280px,1fr))] md:auto-rows-fr'
+      >
+        <SkillCard
+          title='Languages & Frameworks'
+          skills={skills.languagesAndFrameworks}
+        />
+        <SkillCard title='Other Technologies' skills={skills.others} />
+      </motion.div>
+
+      {/* <motion.div
         variants={fadeIn('', '', 0.1, 1)}
         className='flex flex-col gap-10 mt-20 w-[100vw] max-w-[100vw] ml-[calc(50%-50vw)]'
       >
@@ -63,7 +69,7 @@ function About() {
             />
           ))}
         </Marquee>
-      </motion.div>
+      </motion.div> */}
     </>
   );
 }

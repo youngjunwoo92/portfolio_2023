@@ -1,4 +1,10 @@
 import {
+  AiOutlineInstagram,
+  AiFillLinkedin,
+  AiFillGithub,
+} from 'react-icons/ai';
+
+import {
   woostagramThumbnail,
   carrotGameThumbnail,
   cardMakerThumbnail,
@@ -24,6 +30,24 @@ import {
   css,
   git,
 } from '../assets';
+
+export const links = [
+  {
+    id: 'github',
+    icon: AiFillGithub,
+    link: 'https://github.com/youngjunwoo92',
+  },
+  {
+    id: 'instagram',
+    icon: AiOutlineInstagram,
+    link: 'https://www.instagram.com/woo_92/',
+  },
+  {
+    id: 'linkedIn',
+    icon: AiFillLinkedin,
+    link: 'https://www.linkedin.com/in/youngjunwoo92/',
+  },
+];
 
 export const navLinks = [
   { id: 'home', title: 'Home' },
