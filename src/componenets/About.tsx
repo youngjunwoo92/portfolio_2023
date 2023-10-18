@@ -37,9 +37,9 @@ function About() {
       >
         <SkillCard
           title='Languages & Frameworks'
-          skills={skills.languagesAndFrameworks}
+          skills={skills['Languages & Frameworks']}
         />
-        <SkillCard title='Other Technologies' skills={skills.others} />
+        <SkillCard title='Others' skills={skills['Others']} />
       </motion.div>
 
       {/* <motion.div

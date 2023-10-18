@@ -31,12 +31,14 @@ const Earth = () => {
   });
 
   return (
-    <primitive
-      object={model.scene}
-      scale={0.015}
-      position-y={0}
-      rotation-y={0}
-    />
+    <mesh>
+      <primitive
+        object={model.scene}
+        scale={0.015}
+        position-y={0}
+        rotation-y={0}
+      />
+    </mesh>
   );
 };
 

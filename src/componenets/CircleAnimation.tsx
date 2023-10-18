@@ -4,6 +4,7 @@ import { Skill } from './About';
 
 type Props = {
   items: Skill[];
+  title: string;
 };
 
 type CircleProps = {
@@ -11,7 +12,7 @@ type CircleProps = {
   size: number;
 };
 
-export default function CircleAnimation({ items }: Props) {
+export default function CircleAnimation({ title, items }: Props) {
   const ref = useRef() as MutableRefObject<HTMLUListElement>;
   const [size, setSize] = useState<number>(0);
 
@@ -28,7 +29,7 @@ export default function CircleAnimation({ items }: Props) {
   }, []);
 
   return (
-    <div className='flex items-center justify-center relative w-full h-auto aspect-[1/1]'>
+    <div className='group flex items-center justify-center relative w-full h-auto aspect-[1/1] cursor-pointer'>
       <Circle items={items} size={size} ref={ref}>
         {items.map((item) => (
           <li key={item.name} className='bg-slate-300'>
@@ -36,6 +37,16 @@ export default function CircleAnimation({ items }: Props) {
           </li>
         ))}
       </Circle>
+      <div className='opacity-0 group-hover:opacity-100 transition-opacity invisible group-hover:visible absolute inset-0 bg-[rgba(0,0,0,0.9)] rounded-xl'>
+        <div className='flex flex-col items-center justify-center w-full h-full'>
+          <h3 className='text-md font-bold'>{title}</h3>
+          <ul className='mt-2'>
+            {items.map((item) => (
+              <li key={item.name}>{item.name}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
@@ -75,8 +86,8 @@ const Circle = styled.ul<CircleProps>`
   }
 
   & > li {
-    width: 64px;
-    height: 64px;
+    width: 56px;
+    height: 56px;
     position: absolute;
     border-radius: 50%;
     /* background-color: white; */
@@ -87,7 +98,7 @@ const Circle = styled.ul<CircleProps>`
     justify-content: center;
     top: 50%;
     left: 50%;
-    margin: -32px;
+    margin: -28px;
 
     & > img {
       animation: ${imageRotate} 20s linear infinite;

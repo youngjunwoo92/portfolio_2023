@@ -70,7 +70,7 @@ export const navLinks = [
 ];
 
 export const skills = {
-  languagesAndFrameworks: [
+  'Languages & Frameworks': [
     {
       name: 'HTML 5',
       icon: html,
@@ -97,7 +97,7 @@ export const skills = {
       icon: nodejs,
     },
   ],
-  others: [
+  Others: [
     { name: 'React Query', icon: reactQuery },
     {
       name: 'Redux Toolkit',
