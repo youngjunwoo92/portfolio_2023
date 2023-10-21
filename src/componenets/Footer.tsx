@@ -10,7 +10,7 @@ type Link = {
 export default function Footer() {
   return (
     <footer className='flex p-12 text-center'>
-      <div className='max-w-7xl w-full'>
+      <div className='max-w-7xl w-full mx-auto'>
         <h2 className='text-white text-3xl font-bold'>woo.dev</h2>
         <ul className='flex mt-8 justify-center gap-4'>
           {links.map(({ id, link, icon }: Link) => (
