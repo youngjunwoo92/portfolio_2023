@@ -14,15 +14,13 @@ type Props = {
   index: number;
 };
 
-export default function ProjectCard({ project, index }: Props) {
+export default function ProjectCard({ project }: Props) {
   const { name, thumbnail, description, githubLink, link, tags, image } =
     project;
 
   const ref = useRef(null);
   const inView = useInView(ref);
   const controls = useAnimation();
-
-  console.log({ index });
 
   useEffect(() => {
     if (inView) {

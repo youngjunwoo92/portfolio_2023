@@ -1,4 +1,6 @@
 import { lazy, useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
+
 import Footer from './componenets/Footer';
 
 const StarsCanvas = lazy(() => import('./componenets/canvas/Stars'));
@@ -46,6 +48,7 @@ function App() {
         </div>
         <Footer />
       </main>
+      <Analytics />
     </>
   );
 }
