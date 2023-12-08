@@ -10,6 +10,7 @@ import {
   cardMakerThumbnail,
   twitterThumbnail,
   motionThumbnail,
+  appleThumbnail,
   woostagram,
   carrotGame,
   javascript,
@@ -22,6 +23,7 @@ import {
   mongodb,
   motion,
   nodejs,
+  apple,
   redux,
   mysql,
   html,
@@ -126,6 +128,35 @@ export const skills = {
 export const projects = [
   {
     id: 0,
+    name: 'Apple Watch',
+    year: '2023',
+    description:
+      'Built an Instagram Clone project using Next.js for server-side rendering to deepen my understanding of web development, featuring user authentication, post creation, commenting, and a follow/unfollow system.',
+    tags: [
+      {
+        name: 'React',
+        color: 'next',
+      },
+      {
+        name: 'Tailwind',
+        color: 'tailwind',
+      },
+      {
+        name: 'Three.js',
+        color: 'sanity',
+      },
+      {
+        name: 'Theatre.js',
+        color: 'sanity',
+      },
+    ],
+    thumbnail: appleThumbnail,
+    image: apple,
+    githubLink: 'https://github.com/youngjunwoo92/apple_watch',
+    link: 'https://apple-watch-sage.vercel.app/',
+  },
+  {
+    id: 1,
     name: 'Woostagram',
     year: '2023',
     description:
@@ -150,7 +181,7 @@ export const projects = [
     link: 'https://woostagram.vercel.app/',
   },
   {
-    id: 1,
+    id: 2,
     name: 'Twitter Clone',
     year: '2021',
     description:
@@ -179,7 +210,7 @@ export const projects = [
     link: 'https://twitter-fuck.onrender.com',
   },
   {
-    id: 2,
+    id: 3,
     name: 'Motion',
     year: '2021',
     description:
@@ -204,7 +235,7 @@ export const projects = [
     link: 'https://motion-typescript.netlify.app/',
   },
   {
-    id: 3,
+    id: 4,
     name: 'Carrot Game',
     year: '2021',
     description:
@@ -230,7 +261,7 @@ export const projects = [
     link: 'https://carrotgame.netlify.app/',
   },
   {
-    id: 4,
+    id: 5,
     name: 'Card Maker',
     year: '2021',
     description:

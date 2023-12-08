@@ -22,11 +22,13 @@ import carrotGameThumbnail from './projects/carrot-thumbnail.png';
 import twitterThumbnail from './projects/twitter-thumbnail.png';
 import cardMakerThumbnail from './projects/card-thumbnail.png';
 import motionThumbnail from './projects/motion-thumbnail.png';
+import appleThumbnail from './projects/apple-thumbnail.png';
 import woostagram from './projects/woostagram.png';
 import carrotGame from './projects/carrot.png';
 import twitter from './projects/twitter.png';
 import cardMaker from './projects/card.png';
 import motion from './projects/motion.png';
+import apple from './projects/apple.png';
 
 export {
   woostagramThumbnail,
@@ -34,6 +36,7 @@ export {
   cardMakerThumbnail,
   twitterThumbnail,
   motionThumbnail,
+  appleThumbnail,
   profileImage,
   javascript,
   woostagram,
@@ -49,6 +52,7 @@ export {
   github,
   nodejs,
   redux,
+  apple,
   mysql,
   next,
   html,
