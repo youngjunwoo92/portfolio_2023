@@ -23,13 +23,13 @@ function About() {
         variants={fadeIn('', '', 0.1, 1)}
         className='mt-4 text-secondary text-lg md:text-xl leading-[30px]'
       >
-        Dynamic and passionate Full Stack Developer with 1+ year of experience
-        in creating responsive web applications, writing clean and efficient
-        code, and integrating various systems into web-based applications.
-        Demonstrated through the end to end architecture design and
-        implementation of the e-commerce web application at The Code Solution as
-        the sole front end developer, supporting processes from UX input to
-        launch monitoring.
+        Software Engineer with over 2 years of experience in software
+        development, specializing in front-end technologies. Proven track record
+        of implementing efficient, reusable front-end systems for complex web
+        applications, driving performance optimization, and delivering
+        compelling user-facing products. Adept in agile methodologies and
+        experienced in working within cross-functional teams to innovate and
+        deliver high-quality software solutions.
       </motion.p>
       <motion.div
         variants={fadeIn('', '', 0.1, 1)}
